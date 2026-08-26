@@ -1,4 +1,4 @@
-const geminiKey = "AQ.Ab8RN6Lmcakq4ejsknSqZeJA5Z7GtBJhXZFCgCCgAd4l6bAqaQ";
+const geminiKey = process.env.GEMINI_API_KEY || "";
 
 async function testGemini() {
   const modelName = "deep-research-preview-04-2026";

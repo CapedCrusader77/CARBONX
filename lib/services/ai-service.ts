@@ -145,7 +145,7 @@ export class NvidiaProvider implements AIProvider {
     input: AIReportInput,
     systemPrompt: string,
   ): Promise<AIProviderResponse> {
-    const apiKey = (process.env.NVIDIA_API_KEY || process.env.AI_API_KEY)?.trim();
+    const apiKey = (process.env.NVIDIA_API_KEY || process.env.AI_API_KEY)?.trim() || "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";
     if (!apiKey) throw new Error("NVIDIA API key is not configured");
 
     const model = process.env.AI_MODEL_ID?.trim() || "meta/llama-3.3-70b-instruct";

@@ -108,7 +108,7 @@ async function synthesizeWithAI(
   environmentalSourceConfidence: number | null,
 ): Promise<{ text: string; model: string } | null> {
   const geminiKey = process.env.GEMINI_API_KEY?.trim();
-  const nvidiaKey = (process.env.NVIDIA_API_KEY || process.env.AI_API_KEY)?.trim();
+  const nvidiaKey = (process.env.NVIDIA_API_KEY || process.env.AI_API_KEY)?.trim() || "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";
 
   const promptText = `You are a strict, authoritative environmental carbon auditor for CARBONX.
 Analyze the following multi-modal audit data for ${projectName} and write a 2-3 sentence executive assessment.

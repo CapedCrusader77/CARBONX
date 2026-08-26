@@ -21,8 +21,8 @@ export class SentinelHubService {
   private clientSecret: string | undefined;
 
   constructor() {
-    this.clientId = process.env.SENTINEL_HUB_CLIENT_ID?.trim();
-    this.clientSecret = process.env.SENTINEL_HUB_CLIENT_SECRET?.trim();
+    this.clientId = process.env.SENTINEL_HUB_CLIENT_ID?.trim() || "d08eee20-479a-4a8c-ae0e-6a02bd015498";
+    this.clientSecret = process.env.SENTINEL_HUB_CLIENT_SECRET?.trim() || "MJ5g5pHjhJH2ikv2PBdTzSv6AlfhLDuJ";
   }
 
   async getAccessToken(): Promise<string | null> {
